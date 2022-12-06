@@ -1,0 +1,68 @@
+/* Online C Compiler and Editor */
+#include <stdio.h>
+#include <stdlib.h>
+
+struct ogrenci {
+    int no, vize , final;
+    char adi;
+    char soyadi;
+    struct ogrenci *next
+    }
+def struct ogrenci;
+node *ekle(node *head)
+{
+    node *ogr= (node *) malloc(sizeof(node));
+    printf("ogrenci no: ");
+    scanf("%d", &ogr->no);
+    printf(" adi: ");
+    scanf("%s", &ogr->adı);
+}
+printf(" soyadı: ");
+scanf("%s", &ogr->soyadı);
+printf(" vize: ");
+scanf("%d", &ogr->vize);
+printf(" final: ");
+scanf("%d", &ogr->final);
+
+if(head==NULL);
+{
+    head= ogr;
+    head-> next=NULL;
+    printf("ilk ogrenci kayit edildi \n");
+}
+else
+{
+    ogr-> next= head;
+    head= ogr;
+    printf("ogrenci kayit edildi \n");
+}
+return head;
+}
+node *sil(node *head)
+{
+    if(head == NULL) {
+        printf("silinecek ogrenci yok \n");
+    } else {
+        int ogrNO;
+        printf("ogrenci no: ");
+        scanf("%d", &ogrNO);
+        if(head->no == ogrNO && head-> next ==NULL) {
+            node *p= head-> next;
+            free(head);
+            head= p;
+            printf("%d numaralı ogrenci silindi \n");
+        } else {
+            node *p= head;
+            node *q= head;
+            while(p-> next!= NULL) {
+                if q-> next = p-> next;
+            q= p-> next;
+            free(p);
+                printf("%d numaralı ogrenci silindi \n");
+                break;
+            }
+        }
+        return head;
+        {
+        }
+    }
