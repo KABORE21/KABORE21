@@ -42,19 +42,25 @@ node *sil(node *head)
 {
     if(head == NULL) {
         printf("silinecek ogrenci yok \n");
-    } else {
+    } 
+    else 
+    {
         int ogrNO;
         printf("ogrenci no: ");
         scanf("%d", &ogrNO);
-        if(head->no == ogrNO && head-> next ==NULL) {
+        if(head->no == ogrNO && head-> next ==NULL)
+        {
             node *p= head-> next;
             free(head);
             head= p;
             printf("%d numaralı ogrenci silindi \n");
-        } else {
+        } 
+        else
+        {
             node *p= head;
             node *q= head;
-            while(p-> next!= NULL) {
+            while(p-> next!= NULL)
+            {
                 if q-> next = p-> next;
             q= p-> next;
             free(p);
@@ -63,6 +69,6 @@ node *sil(node *head)
             }
         }
         return head;
-        {
-        }
-    }
+        
+        
+   
