@@ -1,0 +1,55 @@
+// in this code we are four lamps that will be use. 
+int LDR_pin= A0;
+int deger=0;
+
+void setup() {
+    // put your setup code here, to run once:
+    serial.begin(9600);
+    
+    pinMode(2, OUTPUT);
+    pinMode(3, OUTPUT);
+    pinMode(4, OUTPUT);
+    pinMode(5, OUTPUT);
+}
+
+void loop() {
+    // put your main code here, to run repeatedly:
+    deger= analogRead(LDR_pin);
+    Serial.print.ln(deger);
+    
+    if (deger <=5)
+{
+    digitalWrite(2, LOW);
+    digitalWrite(3, LOW);
+    digitalWrite(4, LOW);
+    digitalWrite(5, LOW);
+    }
+    if (deger >6 && deger <=36)
+{
+    digitalWrite(2, HIGH);
+    digitalWrite(3, LOW);
+    digitalWrite(4, LOW);
+    digitalWrite(5, LOW);
+    }
+    if (deger >37 && deger <=67)
+{    
+    digitalWrite(2, HIGH);
+    digitalWrite(3, HIGH);
+    digitalWrite(4, LOW);
+    digitalWrite(5, LOW);
+    }
+    if (deger >68 && deger <=90)
+{    
+    digitalWrite(2, HIGH);
+    digitalWrite(3, HIGH);
+    digitalWrite(4, HIGH);
+    digitalWrite(5, LOW);
+    }
+    if (deger >90)
+{    
+    digitalWrite(2, HIGH);
+    digitalWrite(3, HIGH);
+    digitalWrite(4, HIGH);
+    digitalWrite(5, HIGH);
+    }
+}
